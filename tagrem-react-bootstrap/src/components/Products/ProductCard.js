@@ -7,7 +7,8 @@ const ProductCard = (props) => {
       <h3>{props.title}</h3>
       <p>Starting at {props.price}</p>
       <p>{props.paragraph}</p>
-      <a href="#">Learn More ></a>
+
+      <a href="#">{props.image}<br />Learn More ></a>
     </Card>
   );
 };

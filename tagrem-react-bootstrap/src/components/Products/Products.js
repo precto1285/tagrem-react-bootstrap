@@ -1,15 +1,40 @@
 import React, { Component } from 'react';
 import ProductCard from './ProductCard';
-import { Row, Col, Card, FormGroup, Label, Input } from 'reactstrap';
+import { Row, Col, Card, FormGroup, Input } from 'reactstrap';
+import Product1 from '../../images/cereal_b.jpg';
+import Product2 from '../../images/flower_b.jpg';
+import Product3 from '../../images/machine_b.jpg';
+import Product4 from '../../images/candy_b.jpg';
 
 class Products extends Component {
   constructor(props) {
     super(props);
     this.state = {
       product: [
-        { title: 'Product Title 1', price: '$500', paragraph: '', image: '' },
-        { title: 'Product Title 2', price: '$1900', paragraph: '', image: '' },
-        { title: 'Product Title 3', price: '$2730', paragraph: '', image: '' }, { title: 'Product Title 4', price: '$731', paragraph: '', image: '' }
+        {
+          title: 'Product Title 1',
+          price: '$500',
+          paragraph: '',
+          image: <img src={Product1} alt="cereal" width="100%" />
+        },
+        {
+          title: 'Product Title 2',
+          price: '$1900',
+          paragraph: '',
+          image: <img src={Product2} alt='flower' width="100%" />
+        },
+        {
+          title: 'Product Title 3',
+          price: '$2730',
+          paragraph: '',
+          image: <img src={Product3} alt="machine" width="100%" />
+        },
+        {
+          title: 'Product Title 4',
+          price: '$731',
+          paragraph: '',
+          image: <img src={Product4} alt="candy" width="100%" />
+        }
       ]
     }
   }
