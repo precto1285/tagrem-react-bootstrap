@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ProductCard from './ProductCard';
-import { Row, Col, Card } from 'reactstrap';
+import { Row, Col, Card, FormGroup, Label, Input } from 'reactstrap';
 
 class Products extends Component {
   constructor(props) {
@@ -17,7 +17,33 @@ class Products extends Component {
     return (
       <div>
         <Card className="p-3 m-1">
-          <h1>Products</h1>
+          <Row className="mb-2">
+            <Col className="col-md-8">
+              <h1>Products</h1>
+            </Col>
+
+            <Col className="col=md-4">
+
+              <Row>
+                <Col className="text-right pt-2">
+                  Filter By
+            </Col>
+                <Col>
+                  <FormGroup>
+                    <Input type="select" name="select" id="exampleSelect">
+                      <option value=''>All</option>
+                      <option value='<500'>$500 or less</option>
+                      <option value='1000-2000'>From $1000 to $2000</option>
+                      <option value='>2000'>$2000 or more</option>
+                    </Input>
+                  </FormGroup>
+                </Col>
+              </Row>
+
+            </Col>
+
+          </Row>
+
           <Row>
             <Col>
               <ProductCard title={this.state.product[0].title} price={this.state.product[0].price} paragraph={this.state.product[0].paragraph} image={this.state.product[0].image} />
@@ -34,7 +60,7 @@ class Products extends Component {
             </Col>
           </Row>
         </Card>
-      </div >
+      </div>
     );
   }
 }
