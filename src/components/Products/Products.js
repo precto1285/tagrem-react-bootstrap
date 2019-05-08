@@ -12,28 +12,28 @@ class Products extends Component {
     this.state = {
       product: [
         {
-          id: '1',
+          id: 'toggler1',
           title: 'Product Title 1',
           price: '500',
           paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
           image: <img src={Product1} alt="cereal" width="100%" />
         },
         {
-          id: '2',
+          id: 'toggler2',
           title: 'Product Title 2',
           price: '1900',
           paragraph: 'Donec ornare magna sit amet erat molestie sollicitudin ac vitae lectus.',
           image: <img src={Product2} alt='flower' width="100%" />
         },
         {
-          id: '3',
+          id: 'toggler3',
           title: 'Product Title 3',
           price: '2730',
           paragraph: 'Cras non metus sed odio tristique imperdiet.',
           image: <img src={Product3} alt="machine" width="100%" />
         },
         {
-          id: '4',
+          id: 'toggler4',
           title: 'Product Title 4',
           price: '731',
           paragraph: 'Pellentesque mattis tellus ut molestie dapibus.',
@@ -42,6 +42,7 @@ class Products extends Component {
       ]
     }
   }
+
   render() {
     return (
       <div>
@@ -75,17 +76,21 @@ class Products extends Component {
 
           <Row>
             <Col>
-              <ProductCard title={this.state.product[0].title} price={this.state.product[0].price} paragraph={this.state.product[0].paragraph} image={this.state.product[0].image} />
+              <ProductCard id={this.state.product[0].id} title={this.state.product[0].title} price={this.state.product[0].price} paragraph={this.state.product[0].paragraph} image={this.state.product[0].image} />
             </Col>
             <Col>
-              <ProductCard title={this.state.product[1].title} price={this.state.product[1].price} paragraph={this.state.product[1].paragraph} image={this.state.product[1].image} />
+              <ProductCard id={this.state.product[1].id} title={this.state.product[1].title} price={this.state.product[1].price} paragraph={this.state.product[1].paragraph} image={this.state.product[1].image} />
 
             </Col>
             <Col>
-              <ProductCard title={this.state.product[2].title} price={this.state.product[2].price} paragraph={this.state.product[2].paragraph} image={this.state.product[2].image} />
+              <ProductCard id={this.state.product[2].id} title={this.state.product[2].title} price={this.state.product[2].price} paragraph={this.state.product[2].paragraph} image={this.state.product[2].image} />
             </Col>
             <Col>
-              <ProductCard title={this.state.product[3].title} price={this.state.product[3].price} paragraph={this.state.product[3].paragraph} image={this.state.product[3].image} />
+              <ProductCard id={this.state.product[3].id} title={this.state.product[3].title} price={this.state.product[3].price} paragraph={this.state.product[3].paragraph} image={this.state.product[3].image} />
+            </Col>
+          </Row>
+          <Row>
+            <Col>
             </Col>
           </Row>
         </Card>
