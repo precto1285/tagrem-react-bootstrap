@@ -12,26 +12,30 @@ class Products extends Component {
     this.state = {
       product: [
         {
+          id: '1',
           title: 'Product Title 1',
-          price: '$500',
+          price: '500',
           paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
           image: <img src={Product1} alt="cereal" width="100%" />
         },
         {
+          id: '2',
           title: 'Product Title 2',
-          price: '$1900',
+          price: '1900',
           paragraph: 'Donec ornare magna sit amet erat molestie sollicitudin ac vitae lectus.',
           image: <img src={Product2} alt='flower' width="100%" />
         },
         {
+          id: '3',
           title: 'Product Title 3',
-          price: '$2730',
+          price: '2730',
           paragraph: 'Cras non metus sed odio tristique imperdiet.',
           image: <img src={Product3} alt="machine" width="100%" />
         },
         {
+          id: '4',
           title: 'Product Title 4',
-          price: '$731',
+          price: '731',
           paragraph: 'Pellentesque mattis tellus ut molestie dapibus.',
           image: <img src={Product4} alt="candy" width="100%" />
         }

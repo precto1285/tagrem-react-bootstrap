@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from 'reactstrap';
+import { Card, UncontrolledCollapse } from 'reactstrap';
 
 const ProductCard = (props) => {
   return (
@@ -7,8 +7,10 @@ const ProductCard = (props) => {
       <h3>{props.title}</h3>
       <p>Starting at {props.price}</p>
       <p>{props.paragraph}</p>
-
-      <a href="#">{props.image}<br />Learn More ></a>
+      <a href="#" id='toggler'>{props.image}Learn More ></a>
+      <UncontrolledCollapse toggler="#toggler">
+        Hello World!
+      </UncontrolledCollapse>
     </Card>
   );
 };
