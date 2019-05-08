@@ -14,25 +14,25 @@ class Products extends Component {
         {
           title: 'Product Title 1',
           price: '$500',
-          paragraph: '',
+          paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
           image: <img src={Product1} alt="cereal" width="100%" />
         },
         {
           title: 'Product Title 2',
           price: '$1900',
-          paragraph: '',
+          paragraph: 'Donec ornare magna sit amet erat molestie sollicitudin ac vitae lectus.',
           image: <img src={Product2} alt='flower' width="100%" />
         },
         {
           title: 'Product Title 3',
           price: '$2730',
-          paragraph: '',
+          paragraph: 'Cras non metus sed odio tristique imperdiet.',
           image: <img src={Product3} alt="machine" width="100%" />
         },
         {
           title: 'Product Title 4',
           price: '$731',
-          paragraph: '',
+          paragraph: 'Pellentesque mattis tellus ut molestie dapibus.',
           image: <img src={Product4} alt="candy" width="100%" />
         }
       ]
