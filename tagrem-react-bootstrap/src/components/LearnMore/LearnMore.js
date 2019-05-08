@@ -13,7 +13,7 @@ class LearnMore extends Component {
   render() {
     return (
       <div>
-        <Card className="p-3 m-1">
+        <Card className="p-3 m-1 bg-light">
           <h1 className="p-2">In Gravida</h1>
           <Row>
             <Col><LearnMoreCard title={this.state.learnMoreCard[0].title} paragraph={this.state.learnMoreCard[0].paragraph} /></Col>

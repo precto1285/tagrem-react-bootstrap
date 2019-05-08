@@ -41,7 +41,7 @@ class Products extends Component {
   render() {
     return (
       <div>
-        <Card className="p-3 m-1">
+        <Card className="p-3 m-1 bg-light">
           <Row className="mb-2">
             <Col className="col-md-8">
               <h1>Products</h1>

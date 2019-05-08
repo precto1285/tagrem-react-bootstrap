@@ -4,7 +4,7 @@ import { Card, FormGroup, Input, Label } from 'reactstrap';
 const StateFinder = (props) => {
   return (
     <div>
-      <Card className="p-3">
+      <Card className="p-3 bg-light">
         <h2>State Finder</h2>
         <FormGroup>
           <Label for="exampleSelect">Select</Label>
