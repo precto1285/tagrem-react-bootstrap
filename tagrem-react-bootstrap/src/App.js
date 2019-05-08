@@ -5,7 +5,7 @@ import Banner from './components/Banner';
 import MainText from './components/MainText';
 import StateFinder from './components/StateFinder';
 import LearnMore from './components/LearnMore/LearnMore';
-import Products from './components/Products/Products';
+import Product from './components/Products/Products';
 
 function App() {
   return (
@@ -31,7 +31,7 @@ function App() {
         </Row>
         <Row>
           <Col>
-            <Products />
+            <Product />
           </Col>
         </Row>
       </Container>

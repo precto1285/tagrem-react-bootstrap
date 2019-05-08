@@ -7,7 +7,7 @@ const LearnMoreCard = (props) => {
       <h3>{props.title}</h3>
       <p>{props.paragraph}</p>
       <br />
-      <Button>Learn More</Button>
+      <Button className="btn btn-light">Learn More</Button>
     </div>
   );
 };
