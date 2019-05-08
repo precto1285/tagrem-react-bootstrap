@@ -3,9 +3,10 @@ import { Button } from 'reactstrap';
 
 const LearnMoreCard = (props) => {
   return (
-    <div>
+    <div className='p-2 mb-2'>
       <h3>{props.title}</h3>
       <p>{props.paragraph}</p>
+      <br />
       <Button>Learn More</Button>
     </div>
   );
