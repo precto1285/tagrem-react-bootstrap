@@ -1,3 +1,24 @@
 .App {
   background-color: lightgray;
 }
+h1, h2, h3{
+  color: #002b5a;
+  margin-bottom: 42px;
+}
+
+h1 {
+  font-size: 42px;
+  font-weight: 200;
+}
+h2 {
+  font-size: 40px;
+  font-weight: 200;
+}
+h3 {
+  font-size: 15px;
+  font-weight: normal;
+}
+p{
+  color: #333;
+  font-size: 18px;
+}
