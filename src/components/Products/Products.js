@@ -5,6 +5,7 @@ import Product1 from '../../images/cereal_b.jpg';
 import Product2 from '../../images/flower_b.jpg';
 import Product3 from '../../images/machine_b.jpg';
 import Product4 from '../../images/candy_b.jpg';
+// import ProductCollapse from './ProductCollapse';
 
 class Products extends Component {
   constructor(props) {
@@ -39,8 +40,38 @@ class Products extends Component {
           paragraph: 'Pellentesque mattis tellus ut molestie dapibus.',
           image: <img src={Product4} alt="candy" width="100%" />
         }
-      ]
+      ],
+      showtoggle1: false,
+      showtoggle2: false,
+      showtoggle3: false,
+      showtoggle4: false
+
     }
+  }
+
+  showToggler1() {
+    const showtoggler = this.state.showtoggle1;
+    this.setState({
+      showtoggle1: !showtoggler
+    })
+  }
+  showToggler2() {
+    const showtoggler = this.state.showtoggle2;
+    this.setState({
+      showtoggle2: !showtoggler
+    })
+  }
+  showToggler3() {
+    const showtoggler = this.state.showtoggle3;
+    this.setState({
+      showtoggle3: !showtoggler
+    })
+  }
+  showToggler4() {
+    const showtoggler = this.state.showtoggle4;
+    this.setState({
+      showtoggle4: !showtoggler
+    })
   }
 
   render() {
@@ -61,10 +92,10 @@ class Products extends Component {
                 <Col>
                   <FormGroup>
                     <Input type="select" name="select" id="exampleSelect">
-                      <option value=''>All</option>
-                      <option value='<500'>$500 or less</option>
+                      <option value='>0'>All</option>
+                      <option value='<=500'>$500 or less</option>
                       <option value='1000-2000'>From $1000 to $2000</option>
-                      <option value='>2000'>$2000 or more</option>
+                      <option value='>=2000'>$2000 or more</option>
                     </Input>
                   </FormGroup>
                 </Col>
@@ -76,22 +107,55 @@ class Products extends Component {
 
           <Row>
             <Col>
-              <ProductCard id={this.state.product[0].id} title={this.state.product[0].title} price={this.state.product[0].price} paragraph={this.state.product[0].paragraph} image={this.state.product[0].image} />
+              <a onClick={this.showToggler1}
+                className="mt-3"
+                id={this.state.product[0].id}>
+                <ProductCard
+                  id={this.state.product[0].id}
+                  title={this.state.product[0].title}
+                  price={this.state.product[0].price}
+                  paragraph={this.state.product[0].paragraph}
+                  image={this.state.product[0].image} />
+              </a>
             </Col>
             <Col>
-              <ProductCard id={this.state.product[1].id} title={this.state.product[1].title} price={this.state.product[1].price} paragraph={this.state.product[1].paragraph} image={this.state.product[1].image} />
+              <a onClick={this.showToggler2} className="mt-3" id={this.state.product[1].id}><ProductCard id={this.state.product[1].id} title={this.state.product[1].title} price={this.state.product[1].price} paragraph={this.state.product[1].paragraph} image={this.state.product[1].image} /></a>
 
             </Col>
             <Col>
-              <ProductCard id={this.state.product[2].id} title={this.state.product[2].title} price={this.state.product[2].price} paragraph={this.state.product[2].paragraph} image={this.state.product[2].image} />
+              <a onClick={this.showToggler3} className="mt-3" id={this.state.product[2].id}><ProductCard id={this.state.product[2].id} title={this.state.product[2].title} price={this.state.product[2].price} paragraph={this.state.product[2].paragraph} image={this.state.product[2].image} /></a>
             </Col>
             <Col>
-              <ProductCard id={this.state.product[3].id} title={this.state.product[3].title} price={this.state.product[3].price} paragraph={this.state.product[3].paragraph} image={this.state.product[3].image} />
+              <a onClick={this.showToggler4} className="mt-3" id={this.state.product[3].id}><ProductCard id={this.state.product[3].id} title={this.state.product[3].title} price={this.state.product[3].price} paragraph={this.state.product[3].paragraph} image={this.state.product[3].image} /></a>
             </Col>
           </Row>
           <Row>
-            <Col>
-            </Col>
+            {
+              this.state.showtoggle1 ?
+                <Card>
+                  Hello World1
+                </Card>
+                : null
+            }
+            {
+              this.state.showtoggle2 ?
+                <Card>
+                  Hello World2
+                </Card>
+                : null
+            }
+            {
+              this.state.showtoggle3 ?
+                <Card>
+                  Hello World3
+                </Card>
+                : null
+            }
+            {
+              this.state.showtoggle4 ?
+                <Card> Hello World4 </Card>
+                : null
+            }
           </Row>
         </Card>
       </div>
