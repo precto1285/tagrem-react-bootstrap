@@ -15,11 +15,7 @@ import Product2 from '../../images/flower_b.jpg';
 import Product3 from '../../images/machine_b.jpg';
 import Product4 from '../../images/candy_b.jpg';
 
-import FirstProduct from './1Product';
-import SecondProduct from './2Product';
-import ThirdProduct from './3Product';
-import FourthProduct from './4Product';
-
+import LargeProductCard from './LargeProductCard';
 class Products extends Component {
   constructor(props) {
     super(props);
@@ -110,10 +106,10 @@ class Products extends Component {
             </Col>
             <Col className="col=md-4">
               <Row>
-                <Col className="text-right pt-2">
+                <Col className="col-sm-6 text-right pt-2">
                   Filter By
             </Col>
-                <Col>
+                <Col className="col-sm-6">
                   <FormGroup>
                     <Input type="select" name="select" id="exampleSelect">
                       <option value='>0'>All</option>
@@ -127,7 +123,7 @@ class Products extends Component {
             </Col>
           </Row>
           <Row>
-            <Col>
+            <Col className="col-md-3 mb-2">
               <a onClick={this.showToggler1}
                 className="mt-3"
                 id={this.state.product[0].id}>
@@ -139,7 +135,7 @@ class Products extends Component {
                   image={this.state.product[0].image} />
               </a>
             </Col>
-            <Col>
+            <Col className="col-md-3 mb-2">
               <a onClick={this.showToggler2}
                 className="mt-3"
                 id={this.state.product[1].id}>
@@ -152,7 +148,7 @@ class Products extends Component {
               </a>
 
             </Col>
-            <Col>
+            <Col className="col-md-3 mb-2">
               <a onClick={this.showToggler3}
                 className="mt-3"
                 id={this.state.product[2].id}>
@@ -164,7 +160,7 @@ class Products extends Component {
                   image={this.state.product[2].image} />
               </a>
             </Col>
-            <Col>
+            <Col className="col-md-3 mb-2">
               <a onClick={this.showToggler4}
                 className="mt-3"
                 id={this.state.product[3].id}>
@@ -177,7 +173,7 @@ class Products extends Component {
               </a>
             </Col>
           </Row>
-          <Row>
+          <Row className="mt-4">
             <Col>
               {
                 this.state.showtoggle1 ?
@@ -185,11 +181,11 @@ class Products extends Component {
                     <CardHeader>
                       <Row>
                         <Col>Product 1</Col>
-                        <Col className="text-right"><a href="#">X</a></Col>
+                        <Col className="text-right"><a onClick={this.showToggler1}>X</a></Col>
                       </Row>
                     </CardHeader>
                     <CardBody>
-                      <FirstProduct />
+                      <LargeProductCard title={this.state.product[0].title} price={this.state.product[0].price} image={this.state.product[0].image} />
                     </CardBody>
                   </Card>
                   : null
@@ -200,11 +196,11 @@ class Products extends Component {
                     <CardHeader>
                       <Row>
                         <Col>Product 2</Col>
-                        <Col className="text-right"><a href="#">X</a></Col>
+                        <Col className="text-right"><a onClick={this.showToggler2}>X</a></Col>
                       </Row>
                     </CardHeader>
                     <CardBody>
-                      <SecondProduct />
+                      <LargeProductCard title={this.state.product[1].title} price={this.state.product[1].price} image={this.state.product[1].image} />
                     </CardBody>
                   </Card>
                   : null
@@ -215,11 +211,11 @@ class Products extends Component {
                     <CardHeader>
                       <Row>
                         <Col>Product 3</Col>
-                        <Col className="text-right"><a href="#">X</a></Col>
+                        <Col className="text-right"><a onClick={this.showToggler3}>X</a></Col>
                       </Row>
                     </CardHeader>
                     <CardBody>
-                      <ThirdProduct />
+                      <LargeProductCard title={this.state.product[2].title} price={this.state.product[2].price} image={this.state.product[2].image} />
                     </CardBody>
                   </Card>
                   : null
@@ -230,11 +226,11 @@ class Products extends Component {
                     <CardHeader>
                       <Row>
                         <Col>Product 4</Col>
-                        <Col className="text-right"><a href="#">X</a></Col>
+                        <Col className="text-right"><a onClick={this.showToggler4}>X</a></Col>
                       </Row>
                     </CardHeader>
                     <CardBody>
-                      <FourthProduct />
+                      <LargeProductCard title={this.state.product[3].title} price={this.state.product[3].price} image={this.state.product[3].image} />
                     </CardBody>
                   </Card>
                   : null
