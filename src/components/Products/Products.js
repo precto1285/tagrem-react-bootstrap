@@ -180,7 +180,6 @@ class Products extends Component {
                   <Card>
                     <CardHeader>
                       <Row>
-                        <Col>Product 1</Col>
                         <Col className="text-right"><a onClick={this.showToggler1}>X</a></Col>
                       </Row>
                     </CardHeader>
@@ -195,7 +194,6 @@ class Products extends Component {
                   <Card>
                     <CardHeader>
                       <Row>
-                        <Col>Product 2</Col>
                         <Col className="text-right"><a onClick={this.showToggler2}>X</a></Col>
                       </Row>
                     </CardHeader>
@@ -210,7 +208,6 @@ class Products extends Component {
                   <Card>
                     <CardHeader>
                       <Row>
-                        <Col>Product 3</Col>
                         <Col className="text-right"><a onClick={this.showToggler3}>X</a></Col>
                       </Row>
                     </CardHeader>
@@ -225,7 +222,6 @@ class Products extends Component {
                   <Card>
                     <CardHeader>
                       <Row>
-                        <Col>Product 4</Col>
                         <Col className="text-right"><a onClick={this.showToggler4}>X</a></Col>
                       </Row>
                     </CardHeader>

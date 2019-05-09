@@ -17,10 +17,10 @@ function App() {
           </Col>
         </Row>
         <Row>
-          <Col className="col-lg-8">
+          <Col className="col-md-8">
             <MainText />
           </Col>
-          <Col className="col-lg-4">
+          <Col className="col-md-4">
             <StateFinder />
           </Col>
         </Row>
