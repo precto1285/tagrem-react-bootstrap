@@ -178,9 +178,9 @@ class Products extends Component {
               {
                 this.state.showtoggle1 ?
                   <Card>
-                    <CardHeader>
+                    <CardHeader className="bg-primary text-light">
                       <Row>
-                        <Col className="text-right"><a onClick={this.showToggler1}>X</a></Col>
+                        <Col className="text-right font-weight-bolder"><a onClick={this.showToggler1}>X</a></Col>
                       </Row>
                     </CardHeader>
                     <CardBody>
@@ -192,9 +192,9 @@ class Products extends Component {
               {
                 this.state.showtoggle2 ?
                   <Card>
-                    <CardHeader>
+                    <CardHeader className="bg-primary text-light">
                       <Row>
-                        <Col className="text-right"><a onClick={this.showToggler2}>X</a></Col>
+                        <Col className="text-right font-weight-bolder"><a onClick={this.showToggler2}>X</a></Col>
                       </Row>
                     </CardHeader>
                     <CardBody>
@@ -206,9 +206,9 @@ class Products extends Component {
               {
                 this.state.showtoggle3 ?
                   <Card>
-                    <CardHeader>
+                    <CardHeader className="bg-primary text-light">
                       <Row>
-                        <Col className="text-right"><a onClick={this.showToggler3}>X</a></Col>
+                        <Col className="text-right font-weight-bolder"><a onClick={this.showToggler3}>X</a></Col>
                       </Row>
                     </CardHeader>
                     <CardBody>
@@ -220,9 +220,9 @@ class Products extends Component {
               {
                 this.state.showtoggle4 ?
                   <Card>
-                    <CardHeader>
+                    <CardHeader className="bg-primary text-light">
                       <Row>
-                        <Col className="text-right"><a onClick={this.showToggler4}>X</a></Col>
+                        <Col className="text-right font-weight-bolder"><a onClick={this.showToggler4}>X</a></Col>
                       </Row>
                     </CardHeader>
                     <CardBody>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, FormGroup } from 'reactstrap';
+import { Card, FormGroup, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import Select from 'react-select';
 
 const options = [
@@ -59,6 +59,7 @@ const options = [
 class StateFinder extends Component {
   state = {
     selectedOption: null,
+    modal: false
   }
 
   handleChange = (selectedOption) => {
@@ -80,6 +81,14 @@ class StateFinder extends Component {
               options={options} />
           </FormGroup>
         </Card>
+
+        <div>
+          <Modal>
+            <ModalHeader><h1>{options.label}</h1></ModalHeader>
+            <ModalBody><p>{options.info}</p></ModalBody>
+            <ModalFooter></ModalFooter>
+          </Modal>
+        </div>
       </div>
     );
   };
