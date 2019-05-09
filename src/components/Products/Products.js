@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import ProductCard from './ProductCard';
-import { Row, Col, Card, FormGroup, Input } from 'reactstrap';
+import {
+  Row,
+  Col,
+  Card,
+  FormGroup,
+  Input
+}
+  from 'reactstrap';
 import Product1 from '../../images/cereal_b.jpg';
 import Product2 from '../../images/flower_b.jpg';
 import Product3 from '../../images/machine_b.jpg';
@@ -50,25 +57,25 @@ class Products extends Component {
   }
 
   showToggler1() {
-    const showtoggler = this.state.showtoggle1;
+    let showtoggler = this.state.showtoggle1;
     this.setState({
       showtoggle1: !showtoggler
     })
   }
   showToggler2() {
-    const showtoggler = this.state.showtoggle2;
+    let showtoggler = this.state.showtoggle2;
     this.setState({
       showtoggle2: !showtoggler
     })
   }
   showToggler3() {
-    const showtoggler = this.state.showtoggle3;
+    let showtoggler = this.state.showtoggle3;
     this.setState({
       showtoggle3: !showtoggler
     })
   }
   showToggler4() {
-    const showtoggler = this.state.showtoggle4;
+    let showtoggler = this.state.showtoggle4;
     this.setState({
       showtoggle4: !showtoggler
     })
@@ -76,15 +83,14 @@ class Products extends Component {
 
   render() {
     return (
+
       <div>
         <Card className="p-3 m-1 bg-light">
           <Row className="mb-2">
             <Col className="col-md-8">
               <h1>Products</h1>
             </Col>
-
             <Col className="col=md-4">
-
               <Row>
                 <Col className="text-right pt-2">
                   Filter By
@@ -100,11 +106,8 @@ class Products extends Component {
                   </FormGroup>
                 </Col>
               </Row>
-
             </Col>
-
           </Row>
-
           <Row>
             <Col>
               <a onClick={this.showToggler1}
@@ -119,14 +122,41 @@ class Products extends Component {
               </a>
             </Col>
             <Col>
-              <a onClick={this.showToggler2} className="mt-3" id={this.state.product[1].id}><ProductCard id={this.state.product[1].id} title={this.state.product[1].title} price={this.state.product[1].price} paragraph={this.state.product[1].paragraph} image={this.state.product[1].image} /></a>
+              <a onClick={this.showToggler2}
+                className="mt-3"
+                id={this.state.product[1].id}>
+                <ProductCard
+                  id={this.state.product[1].id}
+                  title={this.state.product[1].title}
+                  price={this.state.product[1].price}
+                  paragraph={this.state.product[1].paragraph}
+                  image={this.state.product[1].image} />
+              </a>
 
             </Col>
             <Col>
-              <a onClick={this.showToggler3} className="mt-3" id={this.state.product[2].id}><ProductCard id={this.state.product[2].id} title={this.state.product[2].title} price={this.state.product[2].price} paragraph={this.state.product[2].paragraph} image={this.state.product[2].image} /></a>
+              <a onClick={this.showToggler3}
+                className="mt-3"
+                id={this.state.product[2].id}>
+                <ProductCard
+                  id={this.state.product[2].id}
+                  title={this.state.product[2].title}
+                  price={this.state.product[2].price}
+                  paragraph={this.state.product[2].paragraph}
+                  image={this.state.product[2].image} />
+              </a>
             </Col>
             <Col>
-              <a onClick={this.showToggler4} className="mt-3" id={this.state.product[3].id}><ProductCard id={this.state.product[3].id} title={this.state.product[3].title} price={this.state.product[3].price} paragraph={this.state.product[3].paragraph} image={this.state.product[3].image} /></a>
+              <a onClick={this.showToggler4}
+                className="mt-3"
+                id={this.state.product[3].id}>
+                <ProductCard
+                  id={this.state.product[3].id}
+                  title={this.state.product[3].title}
+                  price={this.state.product[3].price}
+                  paragraph={this.state.product[3].paragraph}
+                  image={this.state.product[3].image} />
+              </a>
             </Col>
           </Row>
           <Row>
