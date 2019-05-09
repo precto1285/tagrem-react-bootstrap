@@ -14,6 +14,7 @@ import Product1 from '../../images/cereal_b.jpg';
 import Product2 from '../../images/flower_b.jpg';
 import Product3 from '../../images/machine_b.jpg';
 import Product4 from '../../images/candy_b.jpg';
+import X from '../../images/close.png';
 
 import LargeProductCard from './LargeProductCard';
 class Products extends Component {
@@ -178,9 +179,9 @@ class Products extends Component {
               {
                 this.state.showtoggle1 ?
                   <Card>
-                    <CardHeader className="bg-primary text-light">
+                    <CardHeader className="bg-light">
                       <Row>
-                        <Col className="text-right font-weight-bolder"><a onClick={this.showToggler1}>X</a></Col>
+                        <Col className="text-right"><a onClick={this.showToggler1}><img src={X} alt="close" /></a></Col>
                       </Row>
                     </CardHeader>
                     <CardBody>
@@ -192,9 +193,9 @@ class Products extends Component {
               {
                 this.state.showtoggle2 ?
                   <Card>
-                    <CardHeader className="bg-primary text-light">
+                    <CardHeader className="bg-light">
                       <Row>
-                        <Col className="text-right font-weight-bolder"><a onClick={this.showToggler2}>X</a></Col>
+                        <Col className="text-right"><a onClick={this.showToggler2}><img src={X} alt="close" /></a></Col>
                       </Row>
                     </CardHeader>
                     <CardBody>
@@ -206,9 +207,9 @@ class Products extends Component {
               {
                 this.state.showtoggle3 ?
                   <Card>
-                    <CardHeader className="bg-primary text-light">
+                    <CardHeader className="bg-light">
                       <Row>
-                        <Col className="text-right font-weight-bolder"><a onClick={this.showToggler3}>X</a></Col>
+                        <Col className="text-right "><a onClick={this.showToggler3}><img src={X} alt="close" /></a></Col>
                       </Row>
                     </CardHeader>
                     <CardBody>
@@ -220,9 +221,9 @@ class Products extends Component {
               {
                 this.state.showtoggle4 ?
                   <Card>
-                    <CardHeader className="bg-primary text-light">
+                    <CardHeader className="bg-light">
                       <Row>
-                        <Col className="text-right font-weight-bolder"><a onClick={this.showToggler4}>X</a></Col>
+                        <Col className="text-right"><a onClick={this.showToggler4}><img src={X} alt="close" /></a></Col>
                       </Row>
                     </CardHeader>
                     <CardBody>
