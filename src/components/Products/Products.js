@@ -4,6 +4,7 @@ import {
   Row,
   Col,
   Card,
+  CardHeader,
   CardBody,
   FormGroup,
   Input
@@ -14,6 +15,10 @@ import Product2 from '../../images/flower_b.jpg';
 import Product3 from '../../images/machine_b.jpg';
 import Product4 from '../../images/candy_b.jpg';
 
+import FirstProduct from './1Product';
+import SecondProduct from './2Product';
+import ThirdProduct from './3Product';
+import FourthProduct from './4Product';
 
 class Products extends Component {
   constructor(props) {
@@ -177,36 +182,60 @@ class Products extends Component {
               {
                 this.state.showtoggle1 ?
                   <Card>
+                    <CardHeader>
+                      <Row>
+                        <Col>Product 1</Col>
+                        <Col className="text-right"><a href="#">X</a></Col>
+                      </Row>
+                    </CardHeader>
                     <CardBody>
-                      Hello World1
-                  </CardBody>
+                      <FirstProduct />
+                    </CardBody>
                   </Card>
                   : null
               }
               {
                 this.state.showtoggle2 ?
                   <Card>
+                    <CardHeader>
+                      <Row>
+                        <Col>Product 2</Col>
+                        <Col className="text-right"><a href="#">X</a></Col>
+                      </Row>
+                    </CardHeader>
                     <CardBody>
-                      Hello World2
-                  </CardBody>
+                      <SecondProduct />
+                    </CardBody>
                   </Card>
                   : null
               }
               {
                 this.state.showtoggle3 ?
                   <Card>
+                    <CardHeader>
+                      <Row>
+                        <Col>Product 3</Col>
+                        <Col className="text-right"><a href="#">X</a></Col>
+                      </Row>
+                    </CardHeader>
                     <CardBody>
-                      Hello World3
-                  </CardBody>
+                      <ThirdProduct />
+                    </CardBody>
                   </Card>
                   : null
               }
               {
                 this.state.showtoggle4 ?
                   <Card>
+                    <CardHeader>
+                      <Row>
+                        <Col>Product 4</Col>
+                        <Col className="text-right"><a href="#">X</a></Col>
+                      </Row>
+                    </CardHeader>
                     <CardBody>
-                      Hello World4
-                </CardBody>
+                      <FourthProduct />
+                    </CardBody>
                   </Card>
                   : null
               }
