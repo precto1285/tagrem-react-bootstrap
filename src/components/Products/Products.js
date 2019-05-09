@@ -4,6 +4,7 @@ import {
   Row,
   Col,
   Card,
+  CardBody,
   FormGroup,
   Input
 }
@@ -12,7 +13,7 @@ import Product1 from '../../images/cereal_b.jpg';
 import Product2 from '../../images/flower_b.jpg';
 import Product3 from '../../images/machine_b.jpg';
 import Product4 from '../../images/candy_b.jpg';
-// import ProductCollapse from './ProductCollapse';
+
 
 class Products extends Component {
   constructor(props) {
@@ -160,32 +161,44 @@ class Products extends Component {
             </Col>
           </Row>
           <Row>
-            {
-              this.state.showtoggle1 ?
-                <Card>
-                  Hello World1
-                </Card>
-                : null
-            }
-            {
-              this.state.showtoggle2 ?
-                <Card>
-                  Hello World2
-                </Card>
-                : null
-            }
-            {
-              this.state.showtoggle3 ?
-                <Card>
-                  Hello World3
-                </Card>
-                : null
-            }
-            {
-              this.state.showtoggle4 ?
-                <Card> Hello World4 </Card>
-                : null
-            }
+            <Col>
+              {
+                this.state.showtoggle1 ?
+                  <Card>
+                    <CardBody>
+                      Hello World1
+                  </CardBody>
+                  </Card>
+                  : null
+              }
+              {
+                this.state.showtoggle2 ?
+                  <Card>
+                    <CardBody>
+                      Hello World2
+                  </CardBody>
+                  </Card>
+                  : null
+              }
+              {
+                this.state.showtoggle3 ?
+                  <Card>
+                    <CardBody>
+                      Hello World3
+                  </CardBody>
+                  </Card>
+                  : null
+              }
+              {
+                this.state.showtoggle4 ?
+                  <Card>
+                    <CardBody>
+                      Hello World4
+                </CardBody>
+                  </Card>
+                  : null
+              }
+            </Col>
           </Row>
         </Card>
       </div>
