@@ -3,58 +3,58 @@ import { Card, FormGroup, Modal, ModalHeader, ModalBody, ModalFooter } from 'rea
 import Select from 'react-select';
 
 const options = [
-  { label: "Select State", value: "0", info: "abcd" },
-  { label: "Alabama", value: "AL", info: "abcd" },
-  { label: "Alaska", value: "AK", info: "abcd" },
-  { label: "Arizona", value: "AZ", info: "abcd" },
-  { label: "Arkansas", value: "AR", info: "abcd" },
-  { label: "California", value: "CA", info: "abcd" },
-  { label: "Colorado", value: "CO", info: "abcd" },
-  { label: "Connecticut", value: "CT", info: "abcd" },
-  { label: "Delaware", value: "DE", info: "abcd" },
-  { label: "District of Columbia", value: "DC", info: "abcd" },
-  { label: "Florida", value: "FL", info: "abcd" },
-  { label: "Georgia", value: "GA", info: "abcd" },
-  { label: "Hawaii", value: "HI", info: "abcd" },
-  { label: "Idaho", value: "ID", info: "abcd" },
-  { label: "Illinois", value: "IL", info: "abcd" },
-  { label: "Indiana", value: "IN", info: "abcd" },
-  { label: "Iowa", value: "IA", info: "abcd" },
-  { label: "Kansas", value: "KS", info: "abcd" },
-  { label: "Kentucky", value: "KY", info: "abcd" },
-  { label: "Louisiana", value: "LA", info: "abcd" },
-  { label: "Maine", value: "ME", info: "abcd" },
-  { label: "Maryland", value: "MD", info: "abcd" },
-  { label: "Massachusetts", value: "MA", info: "abcd" },
-  { label: "Michigan", value: "MI", info: "abcd" },
-  { label: "Minnesota", value: "MN", info: "abcd" },
-  { label: "Mississippi", value: "MS", info: "abcd" },
-  { label: "Missouri", value: "MO", info: "abcd" },
-  { label: "Montana", value: "MT", info: "abcd" },
-  { label: "Nebraska", value: "NE", info: "abcd" },
-  { label: "Nevada", value: "NV", info: "abcd" },
-  { label: "New Hampshire", value: "NH", info: "abcd" },
-  { label: "New Jersey", value: "NJ", info: "abcd" },
-  { label: "New Mexico", value: "NM", info: "abcd" },
-  { label: "New York", value: "NY", info: "abcd" },
-  { label: "North Carolina", value: "NC", info: "abcd" },
-  { label: "North Dakota", value: "ND", info: "abcd" },
-  { label: "Ohio", value: "OH", info: "abcd" },
-  { label: "Oklahoma", value: "OK", info: "abcd" },
-  { label: "Oregon", value: "OR", info: "abcd" },
-  { label: "Pennsylvania", value: "PA", info: "abcd" },
-  { label: "Rhode Island", value: "RI", info: "abcd" },
-  { label: "South Carolina", value: "SC", info: "abcd" },
-  { label: "South Dakota", value: "SD", info: "abcd" },
-  { label: "Tennessee", value: "TN", info: "abcd" },
-  { label: "Texas", value: "TX", info: "abcd" },
-  { label: "Utah", value: "UT", info: "abcd" },
-  { label: "Vermont", value: "VT", info: "abcd" },
-  { label: "Virginia", value: "VA", info: "abcd" },
-  { label: "Washington", value: "WA", info: "abcd" },
-  { label: "West Virginia", value: "WV", info: "abcd" },
-  { label: "Wisconsin", value: "WI", info: "abcd" },
-  { label: "Wyoming", value: "WY", info: "abcd" }
+  { label: "Select State", value: "0", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Alabama", value: "AL", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Alaska", value: "AK", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Arizona", value: "AZ", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Arkansas", value: "AR", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "California", value: "CA", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Colorado", value: "CO", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Connecticut", value: "CT", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Delaware", value: "DE", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "District of Columbia", value: "DC", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Florida", value: "FL", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Georgia", value: "GA", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Hawaii", value: "HI", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Idaho", value: "ID", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Illinois", value: "IL", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Indiana", value: "IN", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Iowa", value: "IA", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Kansas", value: "KS", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Kentucky", value: "KY", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Louisiana", value: "LA", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Maine", value: "ME", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Maryland", value: "MD", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Massachusetts", value: "MA", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Michigan", value: "MI", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Minnesota", value: "MN", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Mississippi", value: "MS", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Missouri", value: "MO", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Montana", value: "MT", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Nebraska", value: "NE", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Nevada", value: "NV", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "New Hampshire", value: "NH", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "New Jersey", value: "NJ", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "New Mexico", value: "NM", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "New York", value: "NY", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "North Carolina", value: "NC", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "North Dakota", value: "ND", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Ohio", value: "OH", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Oklahoma", value: "OK", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Oregon", value: "OR", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Pennsylvania", value: "PA", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Rhode Island", value: "RI", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "South Carolina", value: "SC", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "South Dakota", value: "SD", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Tennessee", value: "TN", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Texas", value: "TX", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Utah", value: "UT", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Vermont", value: "VT", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Virginia", value: "VA", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Washington", value: "WA", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "West Virginia", value: "WV", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Wisconsin", value: "WI", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" },
+  { label: "Wyoming", value: "WY", info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quo cum accusantium illo autem sapiente?" }
 ];
 class StateFinder extends Component {
   constructor(props) {
@@ -63,23 +63,18 @@ class StateFinder extends Component {
       selectedOption: null,
       modal: false
     };
-
     this.toggle = this.toggle.bind(this);
   }
 
-
   handleChange = (selectedOption) => {
-    this.setState({ selectedOption });
+    this.setState(prevState => ({ modal: !prevState.modal }));
   }
-
-
 
   toggle() {
     this.setState(prevState => ({ modal: !prevState.modal }))
   }
 
   render() {
-
     const { selectedOption } = this.state;
 
     return (
@@ -98,8 +93,8 @@ class StateFinder extends Component {
         <div>
 
           <Modal isOpen={this.state.modal} toggle={this.toggle} >
-            <ModalHeader toggle={this.toggle}><h1>{options.label}</h1></ModalHeader>
-            <ModalBody><p>{options.info}</p></ModalBody>
+            <ModalHeader toggle={this.toggle}><h1>State</h1></ModalHeader>
+            <ModalBody><p>Some Text</p></ModalBody>
             <ModalFooter></ModalFooter>
           </Modal>
 
