@@ -60,24 +60,36 @@ class Products extends Component {
   showToggler1 = (e) => {
     let showtoggler = this.state.showtoggle1;
     this.setState({
-      showtoggle1: !showtoggler
+      showtoggle1: !showtoggler,
+      showtoggle2: false,
+      showtoggle3: false,
+      showtoggle4: false
     })
   }
   showToggler2 = (e) => {
     let showtoggler = this.state.showtoggle2;
     this.setState({
-      showtoggle2: !showtoggler
+      showtoggle1: false,
+      showtoggle2: !showtoggler,
+      showtoggle3: false,
+      showtoggle4: false
     })
   }
   showToggler3 = (e) => {
     let showtoggler = this.state.showtoggle3;
     this.setState({
-      showtoggle3: !showtoggler
+      showtoggle1: false,
+      showtoggle2: false,
+      showtoggle3: !showtoggler,
+      showtoggle4: false
     })
   }
   showToggler4 = (e) => {
     let showtoggler = this.state.showtoggle4;
     this.setState({
+      showtoggle1: false,
+      showtoggle2: false,
+      showtoggle3: false,
       showtoggle4: !showtoggler
     })
   }

@@ -29,7 +29,7 @@ function App() {
             <LearnMore />
           </Col>
         </Row>
-        <Row>
+        <Row className="mb-5">
           <Col>
             <Product />
           </Col>
