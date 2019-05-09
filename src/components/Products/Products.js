@@ -54,7 +54,10 @@ class Products extends Component {
       showtoggle1: false,
       showtoggle2: false,
       showtoggle3: false,
-      showtoggle4: false
+      showtoggle4: false,
+      spLess500: false,
+      sp1k2k: false,
+      sp2kMore: false
 
     }
   }
@@ -96,6 +99,27 @@ class Products extends Component {
     })
   }
 
+  under500 = (e) => {
+    let selectlimiter = this.state.spLess500
+    this.setState({
+      spLess500: !selectlimiter
+    })
+  }
+
+  oneKandTwoK = (e) => {
+    let selectlimiter = this.state.sp1k2k
+    this.setState({
+      sp1k2k: !selectlimiter
+    })
+  }
+
+  twoAndMore = (e) => {
+    let selectlimiter = this.state.sp2kMore
+    this.setState({
+      sp2kMore: !selectlimiter
+    })
+  }
+
   render() {
     return (
 
@@ -114,9 +138,9 @@ class Products extends Component {
                   <FormGroup>
                     <Input type="select" name="select" id="exampleSelect">
                       <option value='>0'>All</option>
-                      <option value='<=500'>$500 or less</option>
-                      <option value='1000-2000'>From $1000 to $2000</option>
-                      <option value='>=2000'>$2000 or more</option>
+                      <option onChange={this.under500}>$500 or less</option>
+                      <option onChange={this.oneKandTwoK}>From $1000 to $2000</option>
+                      <option onChange={this.twoAndMore}>$2000 or more</option>
                     </Input>
                   </FormGroup>
                 </Col>
@@ -124,55 +148,67 @@ class Products extends Component {
             </Col>
           </Row>
           <Row>
-            <Col className="col-md-3 mb-2">
-              <a onClick={this.showToggler1}
-                className="mt-3"
-                id={this.state.product[0].id}>
-                <ProductCard
-                  id={this.state.product[0].id}
-                  title={this.state.product[0].title}
-                  price={this.state.product[0].price}
-                  paragraph={this.state.product[0].paragraph}
-                  image={this.state.product[0].image} />
-              </a>
-            </Col>
-            <Col className="col-md-3 mb-2">
-              <a onClick={this.showToggler2}
-                className="mt-3"
-                id={this.state.product[1].id}>
-                <ProductCard
-                  id={this.state.product[1].id}
-                  title={this.state.product[1].title}
-                  price={this.state.product[1].price}
-                  paragraph={this.state.product[1].paragraph}
-                  image={this.state.product[1].image} />
-              </a>
+            {
+              this.state.spLess500 ? null :
+                <Col className="col-md-3 mb-2">
+                  <a onClick={this.showToggler1}
+                    className="mt-3"
+                    id={this.state.product[0].id}>
+                    <ProductCard
+                      id={this.state.product[0].id}
+                      title={this.state.product[0].title}
+                      price={this.state.product[0].price}
+                      paragraph={this.state.product[0].paragraph}
+                      image={this.state.product[0].image} />
+                  </a>
+                </Col>
+            }
+            {
+              this.state.sp1k2k ? null :
 
-            </Col>
-            <Col className="col-md-3 mb-2">
-              <a onClick={this.showToggler3}
-                className="mt-3"
-                id={this.state.product[2].id}>
-                <ProductCard
-                  id={this.state.product[2].id}
-                  title={this.state.product[2].title}
-                  price={this.state.product[2].price}
-                  paragraph={this.state.product[2].paragraph}
-                  image={this.state.product[2].image} />
-              </a>
-            </Col>
-            <Col className="col-md-3 mb-2">
-              <a onClick={this.showToggler4}
-                className="mt-3"
-                id={this.state.product[3].id}>
-                <ProductCard
-                  id={this.state.product[3].id}
-                  title={this.state.product[3].title}
-                  price={this.state.product[3].price}
-                  paragraph={this.state.product[3].paragraph}
-                  image={this.state.product[3].image} />
-              </a>
-            </Col>
+                <Col className="col-md-3 mb-2">
+                  <a onClick={this.showToggler2}
+                    className="mt-3"
+                    id={this.state.product[1].id}>
+                    <ProductCard
+                      id={this.state.product[1].id}
+                      title={this.state.product[1].title}
+                      price={this.state.product[1].price}
+                      paragraph={this.state.product[1].paragraph}
+                      image={this.state.product[1].image} />
+                  </a>
+                </Col>
+            }
+            {
+              this.state.sp2kMore ? null :
+
+                <Col className="col-md-3 mb-2">
+                  <a onClick={this.showToggler3}
+                    className="mt-3"
+                    id={this.state.product[2].id}>
+                    <ProductCard
+                      id={this.state.product[2].id}
+                      title={this.state.product[2].title}
+                      price={this.state.product[2].price}
+                      paragraph={this.state.product[2].paragraph}
+                      image={this.state.product[2].image} />
+                  </a>
+                </Col>
+            }
+            {
+              <Col className="col-md-3 mb-2">
+                <a onClick={this.showToggler4}
+                  className="mt-3"
+                  id={this.state.product[3].id}>
+                  <ProductCard
+                    id={this.state.product[3].id}
+                    title={this.state.product[3].title}
+                    price={this.state.product[3].price}
+                    paragraph={this.state.product[3].paragraph}
+                    image={this.state.product[3].image} />
+                </a>
+              </Col>
+            }
           </Row>
           <Row className="mt-4">
             <Col>
