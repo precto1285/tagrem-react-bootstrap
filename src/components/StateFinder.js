@@ -57,13 +57,25 @@ const options = [
   { label: "Wyoming", value: "WY", info: "abcd" }
 ];
 class StateFinder extends Component {
-  state = {
-    selectedOption: null,
-    modal: false
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedOption: null,
+      modal: false
+    };
+
+    this.toggle = this.toggle.bind(this);
   }
+
 
   handleChange = (selectedOption) => {
     this.setState({ selectedOption });
+  }
+
+
+
+  toggle() {
+    this.setState(prevState => ({ modal: !prevState.modal }))
   }
 
   render() {
@@ -77,17 +89,20 @@ class StateFinder extends Component {
           <FormGroup>
             <Select
               value={selectedOption}
-              onCHange={this.handleChange}
-              options={options} />
+              onChange={this.handleChange}
+              options={options}
+              onInputChange={this.showModal} />
           </FormGroup>
         </Card>
 
         <div>
-          <Modal>
-            <ModalHeader><h1>{options.label}</h1></ModalHeader>
+
+          <Modal isOpen={this.state.modal} toggle={this.toggle} >
+            <ModalHeader toggle={this.toggle}><h1>{options.label}</h1></ModalHeader>
             <ModalBody><p>{options.info}</p></ModalBody>
             <ModalFooter></ModalFooter>
           </Modal>
+
         </div>
       </div>
     );
